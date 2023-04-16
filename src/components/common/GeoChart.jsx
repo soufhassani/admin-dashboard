@@ -5,7 +5,7 @@ import { tokens } from "../../theme";
 import { geoFeatures } from "../../data/mockGeoFeatures";
 import { mockGeographyData as data } from "../../data/mockData";
 
-function GeoChart({ isDashboard = false }) {
+const GeoChart = ({ isDashboard = false }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   return (
@@ -86,6 +86,6 @@ function GeoChart({ isDashboard = false }) {
       }
     />
   );
-}
+};
 
 export default GeoChart;

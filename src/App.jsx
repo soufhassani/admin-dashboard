@@ -17,7 +17,7 @@ import Pie from "./components/pie/Pie";
 import Line from "./components/line/Line";
 import Geo from "./components/geo/Geo";
 
-function App() {
+const App = () => {
   const [theme, colorMode] = useMode();
 
   return (
@@ -48,6 +48,6 @@ function App() {
       </ThemeProvider>
     </ColorModeContext.Provider>
   );
-}
+};
 
 export default App;
