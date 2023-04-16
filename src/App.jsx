@@ -15,6 +15,7 @@ import Faq from "./components/faq/Faq";
 import Bar from "./components/bar/Bar";
 import Pie from "./components/pie/Pie";
 import Line from "./components/line/Line";
+import Geo from "./components/geo/Geo";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -39,6 +40,7 @@ function App() {
                 <Route path="/bar-chart" exact element={<Bar />} />
                 <Route path="/pie-chart" exact element={<Pie />} />
                 <Route path="/line-chart" exact element={<Line />} />
+                <Route path="/geography-chart" exact element={<Geo />} />
               </Routes>
             </main>
           </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, useTheme } from "@mui/material";
+import { useTheme } from "@mui/material";
 import { ResponsiveLine } from "@nivo/line";
 import { tokens } from "../../theme";
 import { mockLineData as data } from "../../data/mockData";
