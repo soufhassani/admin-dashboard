@@ -45,6 +45,10 @@ function Sidebar() {
       borderRight: "none !important",
       minHeight: "100vh",
     },
+    "& .css-ewdv3l": {
+      height: "100vh",
+      overflow: "hidden",
+    },
     "& .ps-sidebar-container": {
       background: `${colors.primary[400]} !important`,
     },
@@ -75,6 +79,22 @@ function Sidebar() {
     "& .pro-menu-item.active": {
       color: "#6870fa !important",
     },
+    // "& .MuiBox-root.css-0": {
+    //   overflowY: "scroll",
+    //   height: "calc(100vh - 80px)",
+    //   scrollbarWidth: "none",
+    //   transition: "all .3s ease-in-ou",
+    // },
+    // "& .MuiBox-root.css-0::-webkit-scrollbar": {
+    //   display: "block",
+    //   opacity: 0,
+    //   transition: "all .3s ease-in-ou",
+    // },
+    // "& .MuiBox-root.css-0:hover::-webkit-scrollbar": {
+    //   display: "block",
+    //   opacity: "0",
+    //   width: "2px",
+    // },
   };
 
   return (
@@ -117,65 +137,76 @@ function Sidebar() {
               </Box>
             )}
           </MenuItem>
-
-          <Box mb="25px">
-            <Box display="flex" justifyContent="center" alignItems="center">
-              <img
-                alt=""
-                width={!isCollapsed ? "100px" : "50px"}
-                height={!isCollapsed ? "100px" : "50px"}
-                src={userImg}
-                style={{
-                  cursor: "pointer",
-                  borderRadius: "50%",
-                  objectFit: "cover",
-                }}
-              />
-            </Box>
-            {!isCollapsed && (
-              <Box textAlign="center">
-                <Typography
-                  variant="h2"
-                  color={colors.grey[100]}
-                  fontWeight="bold"
-                  sx={{ m: "10px 0 0 0" }}
-                >
-                  Soufiane
-                </Typography>
-                <Typography variant="h5" color={colors.greenAccent[500]}>
-                  VP Fancy Admin
-                </Typography>
-              </Box>
-            )}
-          </Box>
-
-          <Box paddingLeft={isCollapsed ? undefined : "10%"}>
-            {menuItems.map((item) => (
-              <React.Fragment key={item._id}>
-                <Typography
-                  variant="h6"
-                  color={colors.grey[300]}
-                  sx={{
-                    m: isCollapsed ? "15px 0px" : "15px 0 5px 20px",
-                    textAlign: isCollapsed ? "center" : "left",
+          <Box>
+            <Box mb="25px" display="flex" gap="20px" p="0 10%">
+              <Box
+                display="flex"
+                justifyContent="center"
+                alignItems="center"
+                flex={isCollapsed && "1"}
+              >
+                <img
+                  alt=""
+                  width={"50px"}
+                  height={"50px"}
+                  src={userImg}
+                  style={{
+                    cursor: "pointer",
+                    borderRadius: "50%",
+                    objectFit: "cover",
                   }}
-                >
-                  {item.name}
-                </Typography>
-                {item.information.map((info) => (
-                  <NavItems
-                    key={info._id}
-                    title={info.title}
-                    label={info.label}
-                    icon={info.icon}
-                    to={info.to}
-                    selected={selected}
-                    setSelected={setSelected}
-                    isCollapsed={isCollapsed}
-                  />
-                ))}
-              </React.Fragment>
-            ))}
+                />
+              </Box>
+              {!isCollapsed && (
+                <Box textAlign="center" flex="1">
+                  <Typography
+                    variant="h4"
+                    color={colors.grey[100]}
+                    fontWeight="bold"
+                    textAlign="left"
+                    sx={{ m: "0 0 0 0" }}
+                  >
+                    Soufiane
+                  </Typography>
+                  <Typography
+                    variant="h6"
+                    textAlign="left"
+                    color={colors.greenAccent[500]}
+                  >
+                    VP Fancy Admin
+                  </Typography>
+                </Box>
+              )}
+            </Box>
+
+            <Box paddingLeft={isCollapsed ? undefined : "10%"} overflowY="auto">
+              {menuItems.map((item) => (
+                <React.Fragment key={item._id}>
+                  <Typography
+                    variant="h6"
+                    color={colors.grey[300]}
+                    sx={{
+                      m: isCollapsed ? "15px 0px" : "15px 0 5px 0px",
+                      textAlign: isCollapsed ? "center" : "left",
+                    }}
+                  >
+                    {item.name}
+                  </Typography>
+                  {item.information.map((info) => (
+                    <NavItems
+                      key={info._id}
+                      title={info.title}
+                      label={info.label}
+                      icon={info.icon}
+                      to={info.to}
+                      selected={selected}
+                      setSelected={setSelected}
+                      isCollapsed={isCollapsed}
+                    />
+                  ))}
+                </React.Fragment>
+              ))}
+            </Box>
           </Box>
         </Menu>
       </SideBar>

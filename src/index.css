@@ -16,7 +16,9 @@ body {
 }
 .content {
   width: 100%;
-  overflow: hidden;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: "scroll";
 }
 
 ::-webkit-scrollbar {

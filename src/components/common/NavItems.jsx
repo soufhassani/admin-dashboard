@@ -21,7 +21,7 @@ const NavItems = ({
     alignItems: "center",
     justifyContent: isCollapsed ? "center" : "flex-start",
     textDecoration: "none",
-    margin: isCollapsed ? "15px 0px" : "15px 5px 15px 20px",
+    margin: isCollapsed ? "15px 0px" : "15px 5px 15px 0px",
   };
 
   return (
