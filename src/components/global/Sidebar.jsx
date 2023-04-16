@@ -69,7 +69,7 @@ function Sidebar() {
     "& .ps-menu-button .ps-menu-label": {
       display: isCollapsed && "none",
     },
-    "& .MuiBox-root .ps-menu-button": {
+    "& .ps-menuitem-root.css-16jkw2k .ps-menu-button": {
       paddingLeft: "0px!important",
     },
     "& .MuiBox-root .ps-menu-button:hover": {
@@ -108,7 +108,7 @@ function Sidebar() {
             onClick={() => handleCollapse()}
             icon={isCollapsed ? <MenuOutlinedIcon /> : null}
             style={{
-              margin: "10px 0 20px 0",
+              margin: "10px 0 10px 0",
               color: colors.grey[100],
               width: "100%",
             }}
@@ -132,7 +132,7 @@ function Sidebar() {
                   color={colors.grey[100]}
                   style={{ flex: "1", marginLeft: "5px" }}
                 >
-                  Logo
+                  My Dashboard
                 </Typography>
               </Box>
             )}
