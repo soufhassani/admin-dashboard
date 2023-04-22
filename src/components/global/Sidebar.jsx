@@ -163,7 +163,10 @@ function Sidebar() {
               )}
             </Box>
 
-            <Box paddingLeft={isCollapsed ? undefined : "10%"} overflowY="auto">
+            <Box
+              paddingLeft={isCollapsed ? undefined : "10%"}
+              sx={{ overflowY: "auto" }}
+            >
               {menuItems.map((item) => (
                 <React.Fragment key={item._id}>
                   <Typography
