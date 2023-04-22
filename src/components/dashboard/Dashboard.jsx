@@ -12,7 +12,7 @@ import Geo from "../geo/Geo";
 import { tokens } from "../../theme";
 import Header from "../common/Header";
 import StatBox from "../common/StatBox";
-import ProgressCircle from "../common/progressCircle";
+import ProgressCircle from "../common/ProgressCircle";
 import { mockTransactions } from "../../data/mockData";
 import LineChart from "../common/LineChart";
 import BarChart from "../common/BarChart";
