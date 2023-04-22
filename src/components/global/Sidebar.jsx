@@ -70,7 +70,7 @@ function Sidebar() {
       display: isCollapsed && "none",
     },
     "& .ps-menuitem-root.css-16jkw2k .ps-menu-button": {
-      paddingLeft: "0px!important",
+      padding: "0px!important",
     },
     "& .MuiBox-root .ps-menu-button:hover": {
       color: "#868dfb !important",
@@ -79,22 +79,6 @@ function Sidebar() {
     "& .pro-menu-item.active": {
       color: "#6870fa !important",
     },
-    // "& .MuiBox-root.css-0": {
-    //   overflowY: "scroll",
-    //   height: "calc(100vh - 80px)",
-    //   scrollbarWidth: "none",
-    //   transition: "all .3s ease-in-ou",
-    // },
-    // "& .MuiBox-root.css-0::-webkit-scrollbar": {
-    //   display: "block",
-    //   opacity: 0,
-    //   transition: "all .3s ease-in-ou",
-    // },
-    // "& .MuiBox-root.css-0:hover::-webkit-scrollbar": {
-    //   display: "block",
-    //   opacity: "0",
-    //   width: "2px",
-    // },
   };
 
   return (
